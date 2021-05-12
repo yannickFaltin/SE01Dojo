@@ -35,7 +35,7 @@ else:
 
         #not all numbers guessed right, use count
         if (count < 4) and (count != 0):
-            print("not the right numbers, but you managed to solve ", count,"numbers of the code. keep trying!")
+            print("not the right numbers, but you managed to solve", count,"numbers of the code. keep trying!")
             print("the following numbers you guessed were right ")
             for c in correct:
                 print(c, end=' ')
@@ -46,9 +46,29 @@ else:
             print("you did not guess any numbers correctly")
             n = int(input("try again and guess another number: "))
 
+
+       # second hint, check if any numbers match the random number (check for index of random number and compare to input number)
+       # while n != number:
+        #    right = 0
+         #   index = 0
+          #  for char in str(n):
+           #     if char == str(number)[index]:
+            #        index += 1
+             #       right += 1
+            #print(f'{right} were right')
+            #n = int(input("That was incorrect! Enter your guess: "))
+        #if n in number:
+            #print("you got a number right but wrong position")
+
+
 #solved puzzle
     if n == number:
+
         print("you have solved the puzzle!")
         print("it took you", ctr, "attempts to solve it.")
 
-    # ctr limit removed
+   #  First attempt at ex.2 using any() to see if input number matches random number
+    #if any(n == number):
+     #   print("you have gotten X digites right at the wrong place")
+
+
