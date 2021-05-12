@@ -21,7 +21,7 @@ else:
         n = str(n)
         number = str(number)
 
-        #list to store correct numbers, X will be used for unknown numbers
+        #list to store correct numbers, X will be used as placeholder for unknown numbers
         correct = ['X']*4
 
         #loop to check all 4 digits
@@ -33,7 +33,7 @@ else:
             else:
                 continue
 
-        #not all numbers guessed right
+        #not all numbers guessed right, use count
         if (count < 4) and (count != 0):
             print("not the right numbers, but you managed to solve ", count,"numbers of the code. keep trying!")
             print("the following numbers you guessed were right ")
@@ -46,11 +46,9 @@ else:
             print("you did not guess any numbers correctly")
             n = int(input("try again and guess another number: "))
 
+#solved puzzle
     if n == number:
         print("you have solved the puzzle!")
         print("it took you", ctr, "attempts to solve it.")
 
-    # ctr limit
-    if ctr > 12:
-        print("you have taken too many tries, and failed the puzzle")
-
+    # ctr limit removed
